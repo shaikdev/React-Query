@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./component/navbar.component";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import HomeScreen from "./screens/home/home.screen";
+import UsersScreen from "./screens/users/users.screen";
+import UserListScreen from "./screens/user list/user.list.screen";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
+const queryClient = new QueryClient();
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <BrowserRouter>
+          <div className="navbar_container">
+            <Navbar />
+          </div>
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/users" element={<UsersScreen />} />
+            <Route path="/user_details" element={<UserListScreen />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+      <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} />
+    </QueryClientProvider>
   );
 }
 
