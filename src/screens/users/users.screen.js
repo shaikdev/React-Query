@@ -11,32 +11,35 @@ const UsersScreen = () => {
     "users",
     getUsers,
     {
-      // staleTime: 5000,
-      enabled: false,
+      staleTime: 5000,
+      select: (data) => {
+        const names = data.data.map((item) => item.name);
+        return names;
+      },
+      // enabled: false,
       // refetchOnMount:true
       // refetchInterval:5000
     }
   );
-
   return (
     <div className="user_screen_wrapper">
       <div className="loading">
         {isLoading && <div className="loading">Loading...</div>}
       </div>
-      {data?.data &&
-        data.data.map((item, i) => {
+      {data &&
+        data.map((item, i) => {
           return (
             <div
               style={{ marginTop: `${i !== 0 && "10px"}` }}
               key={i}
               className="name"
             >
-              {`${i + 1}.`} {item.name}
+              {`${i + 1}.`} {item}
             </div>
           );
         })}
       {isError && <div className="error">{error?.message}</div>}
-      {_.isEmpty(data?.data) && (
+      {_.isEmpty(data) && (
         <div className="button" onClick={refetch}>
           Get Data
         </div>
