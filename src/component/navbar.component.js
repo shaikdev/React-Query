@@ -8,8 +8,8 @@ const Navbar = (props) => {
       route: "/users",
     },
     {
-      label: "User Details",
-      route: "/user_details",
+      label: "Colors",
+      route: "/colors",
     },
   ];
 

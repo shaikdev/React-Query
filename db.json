@@ -230,5 +230,47 @@
         "bs": "target end-to-end models"
       }
     }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "color": "Red"
+    },
+    {
+      "id": 2,
+      "color": "Blue"
+    },
+    {
+      "id": 3,
+      "color": "Gray"
+    },
+    {
+      "id": 4,
+      "color": "Green"
+    },
+    {
+      "id": 5,
+      "color": "White"
+    },
+    {
+      "id": 6,
+      "color": "Yellow"
+    },
+    {
+      "id": 7,
+      "color": "Orange"
+    },
+    {
+      "id": 8,
+      "color": "Brown"
+    },
+    {
+      "id": 9,
+      "color": "Light Gray"
+    },
+    {
+      "id": 10,
+      "color": "Black"
+    }
   ]
 }

@@ -50,17 +50,6 @@ const UserListScreen = () => {
   return (
     <div className="user_details_wrapper">
       <div className="user_details_heading_wrapper">
-        <div
-          onClick={() => navigate(-1)}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            cursor:'pointer'
-          }}
-        >
-          <img width={21} height={21} src={arrowIcon} />
-        </div>
         <div className="user_details_heading">User Details</div>
       </div>
 
