@@ -4,10 +4,6 @@ const Navbar = (props) => {
   const navigate = useNavigate();
   const labels = [
     {
-      label: "Home",
-      route: "/",
-    },
-    {
       label: "Users",
       route: "/users",
     },
