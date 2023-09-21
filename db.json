@@ -271,6 +271,42 @@
     {
       "id": 10,
       "color": "Black"
+    },
+    {
+      "color": "light green",
+      "id": 11
+    },
+    {
+      "color": "light blue",
+      "id": 12
+    },
+    {
+      "color": "light brown",
+      "id": 13
+    },
+    {
+      "color": "light red",
+      "id": 14
+    },
+    {
+      "color": "vilot",
+      "id": 15
+    },
+    {
+      "color": "light blue",
+      "id": 16
+    },
+    {
+      "color": "light gray",
+      "id": 17
+    },
+    {
+      "color": "light grays",
+      "id": 18
+    },
+    {
+      "color": "light white",
+      "id": 19
     }
   ]
 }

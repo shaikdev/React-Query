@@ -11,6 +11,10 @@ const Navbar = (props) => {
       label: "Colors",
       route: "/colors",
     },
+    {
+      label: "Create Users",
+      route: "/create_users",
+    },
   ];
 
   const navigateControl  =(data)=> {

@@ -8,6 +8,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import ColorScreen from "./screens/colors/colros.screen";
 import HomeScreen from "./screens/home/home.screen";
+import CreateColorScreen from "./screens/create_colors/create.colors.screen";
 
 const queryClient = new QueryClient();
 function App() {
@@ -19,10 +20,11 @@ function App() {
             <Navbar />
           </div>
           <Routes>
-          <Route path="/" element={<HomeScreen/>} />
+            <Route path="/" element={<HomeScreen />} />
             <Route path="/users" element={<UsersScreen />} />
             <Route path="/user_details/:id" element={<UserListScreen />} />
-            <Route path="/colors" element={<ColorScreen/>} />
+            <Route path="/colors" element={<ColorScreen />} />
+            <Route path="/create_users" element={<CreateColorScreen />} />
           </Routes>
         </BrowserRouter>
       </div>

@@ -19,7 +19,7 @@ const ColorScreen = () => {
     );
   };
 
-  // apicall
+  // api call
   const {
     isLoading,
     data,
